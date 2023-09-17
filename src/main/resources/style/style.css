@@ -1,0 +1,11 @@
+.rootLayout {
+    -fx-background-color: black;
+}
+
+Label {
+    -fx-font-size: 20;
+}
+
+TextField {
+    -fx-font-size: 20;
+}

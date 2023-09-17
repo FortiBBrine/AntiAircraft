@@ -3,14 +3,31 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.canvas.Canvas?>
 
-<BorderPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:id="rootLayout"
-            fx:controller="me.sashasteblevets.antiaircraft.scene.Window"
-            minHeight="400.0" minWidth="600.0">
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
 
-    <center>
-        <Canvas fx:id="canvas" />
-    </center>
+<GridPane xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:id="rootLayout"
+          fx:controller="me.sashasteblevets.antiaircraft.scene.Window"
+          minHeight="400.0" minWidth="600.0">
 
-</BorderPane>
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" percentWidth="20"/>
+        <ColumnConstraints hgrow="SOMETIMES" percentWidth="80"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints vgrow="SOMETIMES" percentHeight="100"/>
+    </rowConstraints>
+    <VBox fx:id="menuLayout" GridPane.rowIndex="0" GridPane.columnIndex="0" >
+        <Label prefWidth="${menuLayout.width}" text="Швидкість" />
+        <TextField fx:id="speedTextField" prefWidth="${menuLayout.width}" />
+        <Label prefWidth="${menuLayout.width}" text="Ширина цілі" />
+        <TextField fx:id="widthTextField" prefWidth="${menuLayout.width}" />
+        <Label prefWidth="${menuLayout.width}" text="Висота цілі" />
+        <TextField fx:id="heightTextField" prefWidth="${menuLayout.width}" />
+        <Button prefWidth="${menuLayout.width}" text="В початок" onMouseClicked="#buttonMouseClicked" />
+    </VBox>
+    <Canvas fx:id="canvas" width="${rootLayout.width}" height="${rootLayout.height}" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+</GridPane>

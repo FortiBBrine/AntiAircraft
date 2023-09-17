@@ -32,6 +32,7 @@ public class Main extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(this.getClass().getResource("/window.fxml"));
 
         Parent root = fxmlLoader.load();
+        root.getStylesheets().add("style/style.css");
 
         primaryStage.setScene(new Scene(root));
         primaryStage.setTitle("ВТЮІ 2023");
