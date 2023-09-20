@@ -17,9 +17,14 @@ public class Window {
 
     @FXML private GridPane rootLayout;
     @FXML private VBox menuLayout;
+    @FXML private VBox rightMenuLayout;
+
     @FXML private TextField speedTextField;
     @FXML private TextField widthTextField;
     @FXML private TextField heightTextField;
+
+    @FXML private TextField gunPosXField;
+
     @FXML private Canvas canvas;
 
     private GraphicsContext gc;

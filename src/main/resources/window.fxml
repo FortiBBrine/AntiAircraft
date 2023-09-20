@@ -15,7 +15,8 @@
 
     <columnConstraints>
         <ColumnConstraints hgrow="SOMETIMES" percentWidth="20"/>
-        <ColumnConstraints hgrow="SOMETIMES" percentWidth="80"/>
+        <ColumnConstraints hgrow="SOMETIMES" percentWidth="60"/>
+        <ColumnConstraints hgrow="SOMETIMES" percentWidth="20"/>
     </columnConstraints>
     <rowConstraints>
         <RowConstraints vgrow="SOMETIMES" percentHeight="100"/>
@@ -29,5 +30,10 @@
         <TextField fx:id="heightTextField" prefWidth="${menuLayout.width}" />
         <Button prefWidth="${menuLayout.width}" text="В початок" onMouseClicked="#buttonMouseClicked" />
     </VBox>
+    <VBox fx:id="rightMenuLayout" GridPane.rowIndex="0" GridPane.columnIndex="2">
+        <Label prefWidth="${rightMenuLayout.width}" text="X" />
+        <TextField fx:id="gunPosXField" prefWidth="${menuLayout.width}" />
+    </VBox>
+
     <Canvas fx:id="canvas" width="${rootLayout.width}" height="${rootLayout.height}" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
 </GridPane>
